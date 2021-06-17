@@ -1,0 +1,31 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Change look of tabs */
+.tab-background {
+  border-top: var(--identity-icon-color) 2px solid !important;
+  margin-block: 0 !important;
+  border-radius: 4px 4px 0 0 !important;
+}
+
+.tab-background[selected="true"] {
+  background-image: linear-gradient(
+    var(--toolbar-bgcolor),
+    var(--toolbar-bgcolor)
+  ) !important;
+}
+
+.tab-context-line {
+  visibility: hidden;
+}
+
+/* Hide bookmark text if it's preceeded by a '.' */
+.bookmark-item[label^="."] .toolbarbutton-text,
+#OtherBookmarks .toolbarbutton-text {
+  visibility: hidden;
+  width: 0;
+}
+
+.bookmark-item[label^="."] .toolbarbutton-icon,
+#OtherBookmarks .toolbarbutton-icon {
+  margin-inline-end: 0 !important;
+}
