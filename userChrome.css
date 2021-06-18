@@ -18,6 +18,11 @@
   visibility: hidden;
 }
 
+/* Increase contrast */
+#navigator-toolbox {
+  --toolbar-bgcolor: rgb(66, 65, 77) !important;
+}
+
 /* Hide bookmark text if it's preceeded by a '.' */
 .bookmark-item[label^="."] .toolbarbutton-text,
 #OtherBookmarks .toolbarbutton-text {
